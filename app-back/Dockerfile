@@ -3,5 +3,5 @@ FROM node:lts-alpine
 COPY ./ /dev-full-mvp2
 WORKDIR /dev-full-mvp2/app-back
 RUN npm i package.json
-RUN npm audit fix --force
+RUN npm audit fix 
 CMD ["npm", "start"]
