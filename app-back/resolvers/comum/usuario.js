@@ -15,11 +15,11 @@ module.exports = {
             exp: agora + (3 * 24 * 60 * 60)
         }
 
-        
+        const authSecret = process.env.APP_AUTH_SECRET
+        console.log(authSecret) // Log the authSecret variable
         return {
             ...usuarioInfo,
-            token: jwt.encode(usuarioInfo,
-                process.env.APP_AUTH_SECRET)
+            token: jwt.encode(usuarioInfo,authSecret)
         }
     }
 }

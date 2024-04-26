@@ -96,6 +96,7 @@ const mutations = {
                     // criptografar a senha
                     const salt = bcrypt.genSaltSync()
                     dados.senha = bcrypt.hashSync(dados.senha, salt)
+                    console.log(dados.senha)
                 }
 
                 delete dados.perfis
