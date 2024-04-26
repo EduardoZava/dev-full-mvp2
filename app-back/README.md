@@ -4,8 +4,6 @@
 
 docker pull mysql
 
-docker scout quickview mysql
-
 ##para acessar este banco por root remotamente no dbeaver
 jdbc:mysql://0.0.0.0:3306/mydb?allowPublicKeyRetrieval=True
 
