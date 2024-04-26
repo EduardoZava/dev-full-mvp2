@@ -63,9 +63,9 @@ export default {
         registrar() {
             this.$api.mutate({
                 mutation: gql`mutation (
-                    $nome: String
-                    $email: String
-                    $senha: String
+                    $nome: String!
+                    $email: String!
+                    $senha: String!
                 ) {
                     registrarUsuario(
                         dados: { 

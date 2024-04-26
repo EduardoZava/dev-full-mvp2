@@ -116,6 +116,7 @@ export default {
             this.$api.query({
                 query: gql`{ perfis { id rotulo } }`
             }).then(resultado => {
+                //console.log(resultado)
                 this.perfis = resultado.data.perfis
                 this.erros = null
             }).catch(e => {
