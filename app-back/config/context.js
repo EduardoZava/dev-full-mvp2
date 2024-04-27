@@ -1,8 +1,9 @@
 const jwt = require('jwt-simple')
+const secrets = require('../secrets') // Import the secrets module
 
 module.exports = async ({ req }) => {
     // Em desenvolvimento
-     await require('./simularUsuarioLogado')(req)
+    //await require('./simularUsuarioLogado')(req)
 
     const auth = req.headers.authorization
     const token = auth && auth.substring(7)
@@ -12,8 +13,7 @@ module.exports = async ({ req }) => {
 
     if(token) {
         try {
-            let conteudoToken = jwt.decode(token,
-                process.env.APP_AUTH_SECRET)
+            let conteudoToken = jwt.decode(token,secrets.APP_AUTH_SECRET)
             if(new Date(conteudoToken.exp * 1000) > new Date()) {
                 usuario = conteudoToken
             }

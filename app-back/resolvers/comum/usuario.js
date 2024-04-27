@@ -1,5 +1,6 @@
 const jwt = require('jwt-simple')
 const { perfis: obterPerfis } = require('../Type/Usuario')
+const secrets = require('../../secretss')   // Import the secrets module
 
 module.exports = {
     async getUsuarioLogado(usuario) {
@@ -15,7 +16,7 @@ module.exports = {
             exp: agora + (3 * 24 * 60 * 60)
         }
 
-        const authSecret = process.env.APP_AUTH_SECRET
+        const authSecret = secrets.APP_AUTH_SECRET // Get the APP_AUTH_SECRET from the secrets module
         console.log(authSecret) // Log the authSecret variable
         return {
             ...usuarioInfo,

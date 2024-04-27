@@ -22,6 +22,7 @@ else
     echo "Network 'my-network' does not exist creating network"
     docker network create my-network
 fi
-docker run -d --network my-network -p 4000:4000 app-back  
+docker run --name backend -d --network my-network -p 4000:4000 app-back  
 cd ../../..          
 rm -rf temp
+
