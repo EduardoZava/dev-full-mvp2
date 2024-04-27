@@ -14,7 +14,7 @@ module.exports = {
     database: 'mydb',
     user: 'root',
     password: 'xpto1234',
-    host: 'localhost'
+    host: '172.25.80.1'
     
   },
   pool: {
