@@ -22,7 +22,14 @@ else
     echo "Network 'my-network' does not exist creating network"
     docker network create my-network
 fi
-docker run --name backend -d --network my-network -p 4000:4000 app-back  
+
+if docker ps -q -f name=backend >/dev/null 2>&1; then
+    echo "Backend container is already running, stopping and recreating container"
+    docker stop backend
+    docker rm backend
+fi
+
+docker run --name backend -d --network my-network -p 4000:4000 app-back
 docker logs backend
 cd ../../..          
 rm -rf temp
