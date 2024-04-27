@@ -1,4 +1,4 @@
-const { secrets } = require('../../secrets') // Import the secrets module
+const { secrets , APP_AUTH_SECRET } = require('../../secrets') // Import the secrets module
 const jwt = require('jwt-simple')
 const { perfis: obterPerfis } = require('../Type/Usuario')
 
@@ -17,7 +17,7 @@ module.exports = {
             exp: agora + (3 * 24 * 60 * 60)
         }
 
-        const authSecret = secrets.APP_AUTH_SECRET // Get the APP_AUTH_SECRET from the secrets module
+        const authSecret = APP_AUTH_SECRET // Get the APP_AUTH_SECRET from the secrets module
         console.log(authSecret) // Log the authSecret variable
         return {
             ...usuarioInfo,
