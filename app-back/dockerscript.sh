@@ -13,6 +13,7 @@ fi
 mkdir temp
 cd temp
 git clone https://github.com/EduardoZava/dev-full-mvp2.git
+cp .env dev-full-mvp2/app-back
 cd dev-full-mvp2/app-back
 docker build -t app-back .
 if docker network inspect my-network >/dev/null 2>&1; then
