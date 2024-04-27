@@ -21,7 +21,10 @@ npm run start
 #e o apollo server irá executar nesta porta 
 http://localhost:4000/
 
+docker exec -it container_id //bin//sh
 
+
+https://forums.docker.com/t/how-to-create-a-network-of-containers-that-can-communicate-with-each-other-interchangably/134292/2
 
 
 

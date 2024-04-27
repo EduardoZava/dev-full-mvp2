@@ -1,13 +1,12 @@
-
-
 # Check if a MySQL container is already running
 if [ "$(docker ps -q -f name=mydb)" ]; then
     echo "MySQL container 'mydb' is already running"
 else
     echo "MySQL container 'mydb' does not exist, creating and starting container"
-    docker run --name mydb -p 3306:3306 -e MYSQL_DATABASE=mydb -e MYSQL_ROOT_PASSWORD=xpto1234 -d mysql:latest
+    docker run --name mydb -d   -p 3306:3306 -e MYSQL_DATABASE=mydb -e MYSQL_ROOT_PASSWORD=xpto1234 -d mysql:latest
+    docker network connect my-network mydb
 fi
-
+# Check if a temp folder exists and remove it
 if [ -d temp ]; then
     rm -rf temp
 fi
