@@ -1,4 +1,4 @@
-import secrets from '../../secrets' // Import the secrets module
+const { secrets } = require('../secrets') // Import the secrets module
 const jwt = require('jwt-simple')
 
 
