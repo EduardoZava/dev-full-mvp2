@@ -1,4 +1,4 @@
-export const secrets = {
+module.export secrets = {
     NODE_ENV: 'development',
     // NODE_ENV: 'production',
 

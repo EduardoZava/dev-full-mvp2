@@ -1,5 +1,6 @@
+import secrets from '../../secrets' // Import the secrets module
 const jwt = require('jwt-simple')
-const secrets = require('../secrets') // Import the secrets module
+
 
 module.exports = async ({ req }) => {
     // Em desenvolvimento

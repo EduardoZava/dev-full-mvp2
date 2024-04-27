@@ -23,6 +23,7 @@ else
     docker network create my-network
 fi
 docker run --name backend -d --network my-network -p 4000:4000 app-back  
+docker logs backend
 cd ../../..          
 rm -rf temp
 

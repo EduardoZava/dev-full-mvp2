@@ -1,6 +1,7 @@
+import secrets from '../../secrets' // Import the secrets module
 const jwt = require('jwt-simple')
 const { perfis: obterPerfis } = require('../Type/Usuario')
-const secrets = require('../../secretss')   // Import the secrets module
+
 
 module.exports = {
     async getUsuarioLogado(usuario) {
