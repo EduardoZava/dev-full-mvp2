@@ -17,7 +17,13 @@ else
     echo "Network 'my-network' does not exist creating network"
     docker network create my-network
 fi
-docker run -d--network my-network -p 8080:8080 app-front
+if docker container inspect frontend >/dev/null 2>&1; then
+    echo "Container 'frontend' is already running"
+    docker stop frontend
+    docker rm frontend
+fi
+docker run --name frontend -d --network my-network -p 8080:8080 app-front
+docker logs frontend
 #destroy the temp folder
 cd ../../..          
 rm -rf temp
