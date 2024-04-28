@@ -31,4 +31,18 @@ type Mutation {
         filtro: PerfilFiltro!
         dados: PerfilInput!
     ): Perfil
+
+    # Mutations de Endereco
+    novoEndereco(
+        dados: EnderecoInput!
+    ): Endereco!
+
+    excluirEndereco(
+        filtro: EnderecoFiltro!
+    ): Endereco
+
+    alterarEndereco(
+        filtro: EnderecoFiltro!
+        dados: EnderecoInput!
+    ): Endereco
 }

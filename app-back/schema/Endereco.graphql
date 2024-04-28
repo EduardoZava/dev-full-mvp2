@@ -1,0 +1,19 @@
+type Endereco {
+    id: Int
+    CEP: String!
+    logradouro: String!
+    numero: String!
+    complemento: String!
+    bairro: String!
+    cidade: String!
+    estado: String!
+    usuarios_id: Int!
+}
+
+input EnderecoInput {
+    id: Int
+}
+
+input EnderecoFiltro {
+    id: Int
+}
