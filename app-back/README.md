@@ -44,6 +44,8 @@
 
   `npx knex migrate:latest`  para a criacao das tabelas de 
 
+  `update mydb.usuarios_perfis SET perfil_id = 2 WHERE usuario_id = 2` auxilio futuro para tornar o 2o. usuario administador
+
 - Uma vez sendo feitas estas instalações verificar se o mysql bd mydb foi criado com sucesso com suas tabelas
 - npm audit fix também pode ser usado para minimizar erros de compatibilidade de versões para execução do backend
 - Caso afimativo o banco estiver ok proximas vezes é só executar o script shell "pipeline" do projeto:
