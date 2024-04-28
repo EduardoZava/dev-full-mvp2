@@ -39,6 +39,7 @@
 `.\dockerscript.sh`
 
 
+
 ![Frontend - API ](image.png)
 
 ## Observações e anotações sobre dificuldades e bugs do projeto
