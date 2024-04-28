@@ -24,7 +24,7 @@
 
 				<v-tab>
 					Endereco
-					<v-icon>how_to_reg</v-icon>
+					<v-icon>map-marker</v-icon>
 				</v-tab>
 
 				<v-tab-item>
