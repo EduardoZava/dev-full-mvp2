@@ -24,6 +24,12 @@
 - E depois navegara para o subdiretorio aqui neste caso o app-back em dev-full-mvp2/app-back
 - Executar comandos:
   
+  `code .`
+
+  `abrir o terminal dentro do vscode`
+
+  `se nao abriu o ideal é que seja um terminal bash ou pwsh`
+
   `npm i package.json`
 
   `npm -i knex mysql2`
