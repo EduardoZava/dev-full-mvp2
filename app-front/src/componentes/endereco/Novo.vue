@@ -3,18 +3,26 @@
         <v-layout>
             <v-flex>
                 <v-layout column class="ma-3">
-                    <h1 class="headline">Novo Perfil</h1>
+                    <h1 class="headline">Novo Endereco</h1>
                     <v-divider class="mb-3" />
                         <div v-if="erros">
                             <Erros :erros="erros" />
                         </div>
-                        <v-text-field label="Nome"
-                            v-model="perfil.nome" />
-                        <v-text-field label="Rótulo"
-                            v-model="perfil.rotulo" />
+                        <v-text-field label="Logradoruro"
+                            v-model="endereco.logradoruro" />
+                        <v-text-field label="CEP"
+                            v-model="endereco.CEP" />
+                        <v-text-field label="Bairro"
+                            v-model="endereco.bairro" />
+                        <v-text-field label="Cidade"
+                            v-model="endereco.cidade" />
+                        <v-text-field label="Estado"
+                            v-model="endereco.estado" />
+                        <v-text-field label="País"
+                            v-model="endereco.pais" />
                         <v-btn color="primary" class="ml-0 mt-3"
-                            @click="novoPerfil">
-                            Novo Perfil
+                            @click="novoEndereco">
+                            Novo Endereco
                         </v-btn>
                 </v-layout>
             </v-flex>
@@ -25,10 +33,18 @@
                     <template v-if="dados">
                         <v-text-field label="ID" readonly
                             v-model="dados.id" />
-                        <v-text-field label="Nome" readonly
-                            v-model="dados.nome" />
-                        <v-text-field label="Rótulo" readonly
-                            v-model="dados.rotulo" />
+                        <v-text-field label="Logradouro" readonly
+                            v-model="dados.logradouro" />
+                        <v-text-field label="CEP" readonly
+                            v-model="dados.CEP" />
+                        <v-text-field label="Bairro" readonly
+                            v-model="dados.bairro" />
+                        <v-text-field label="Cidade" readonly
+                            v-model="dados.cidade" />
+                        <v-text-field label="Estado" readonly
+                            v-model="dados.estado" />
+                        <v-text-field label="País" readonly
+                            v-model="dados.pais" />
                     </template>
                 </v-layout>
             </v-flex>
@@ -44,13 +60,13 @@ export default {
     components: { Erros },
     data() {
         return {
-            perfil: {},
+            endereco: {},
             dados: null,
             erros: null
         }
     },
     methods: {
-        novoPerfil() {
+        novoPEndereco() {
             this.$api.mutate({
                 mutation: gql`mutation (
                     $nome: String

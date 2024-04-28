@@ -24,7 +24,7 @@
 
 				<v-tab>
 					Endereco
-					<v-icon>map-marker</v-icon>
+					<v-icon>home</v-icon>
 				</v-tab>
 
 				<v-tab-item>
@@ -38,6 +38,10 @@
 				<v-tab-item>
 					<PerfilAbas />
 				</v-tab-item>
+
+				<v-tab-item>
+					<EnderecoAbas />
+				</v-tab-item>
 			</v-tabs>
 		</v-flex>
 	</v-layout>
@@ -48,6 +52,7 @@ import AutenticacaoAbas from './autenticacao/Abas'
 import UsuarioLogado from './autenticacao/UsuarioLogado'
 import UsuarioAbas from './usuario/Abas'
 import PerfilAbas from './perfil/Abas'
+import EnderecoAbas from './endereco/Abas'
 
 export default {
 	components: {
@@ -55,6 +60,7 @@ export default {
 		UsuarioLogado,
 		UsuarioAbas,
 		PerfilAbas,
+		EnderecoAbas
 	},
 }
 </script>
